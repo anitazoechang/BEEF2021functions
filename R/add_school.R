@@ -26,7 +26,7 @@ add_school <- function(school, class = NULL, lat, long, weight, username=NULL, p
     pass <- sprintf("mongodb://%s:%s@datamuster-shard-00-00-8mplm.mongodb.net:27017,datamuster-shard-00-01-8mplm.mongodb.net:27017,datamuster-shard-00-02-8mplm.mongodb.net:27017/test?ssl=true&replicaSet=DataMuster-shard-0&authSource=admin", username, password)
     db <- mongolite::mongo(collection = "Schools", db = "BEEF2021", url = pass, verbose = T)
 
-    if(is.null(class)){class = NA}
+    if(is.null(class)){class = ""}
     data <- sprintf('{"school":"%s", "class":"%s", "latitude":%s, "longitude":%s, "weight":%s}',
                     school, class, lat, long, weight)
     
