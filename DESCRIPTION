@@ -1,4 +1,4 @@
-Package: BEEF2021 functions
+Package: BEEF2021functions
 Type: Package
 Title: Provides access to functions for use in conjunction with WOW at BEEF2021
 Version: 0.1.0
